@@ -1,15 +1,6 @@
 name: Build
-
-on:
-  push:
-    branches: [ main ]
-    types: [opened, synchronize, reopened]
-  pull_request:
-    branches: [ main ]
-    types: [opened, synchronize, reopened]
-    
-defaults:
-  run:
+run-name: ${{ github.actor }} Build Test
+on: [push]
 
 jobs:
   build:
