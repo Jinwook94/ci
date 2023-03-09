@@ -29,3 +29,11 @@ jobs:
         name: jar
         path: build/libs/*.jar
       if: always()
+      
+      
+    - name: Upload Jacoco Test Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test report
+        path: build/reports/jacoco/test/html/index.html
+      if: always()
