@@ -26,6 +26,10 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
+jar {
+	exclude 'plain.jar'
+}
+
 test {
 	useJUnitPlatform()
 	finalizedBy jacocoTestReport
