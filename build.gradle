@@ -26,10 +26,6 @@ tasks.named('test') {
 	useJUnitPlatform()
 }
 
-jar {
-	exclude 'plain.jar'
-}
-
 test {
 	useJUnitPlatform()
 	finalizedBy jacocoTestReport
@@ -42,4 +38,12 @@ jacocoTestReport {
 		html.enabled true
 	}
 	dependsOn test
+}
+
+bootJar {
+	enabled = true
+}
+
+jar {
+	enabled = false
 }
